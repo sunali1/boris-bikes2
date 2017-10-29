@@ -8,8 +8,9 @@ def initialize
   @bikes = []
 end
 
-  def release_bike(bike = Bike.new)
-    @bike = bike
+  def release_bike
+    fail "No bikes available" unless @bike
+    @bike
   end
 
   def dock(bike)
